@@ -1,0 +1,50 @@
+Instalacion de Ubuntu Server para simulacion de infraestructura
+
+*Objetivo Principal
+-Aprender la instalacion incial de Ubuntu Server en una maquina como servidor
+-Realizar las configuraciones iniciales adecuadas
+-Comprender los pasos de instalacion de Ubuntu Server y aplicarlos de manera adecuada a las necesidades del usuario final
+
+*Entorno de instalacion
+Hipervisor: VirtualBox
+Memoria RAM: Por definir
+Almacenamiento: 25 GB
+Red: DCHP (red local)
+
+-Pasos de instalacion-
+
+*Descarga de la ISO
+Se accedio a Google y en el buscador se escribio la palabra Ubuntu Server ISO, descargando desde la web oficial Ubuntu Server Ubuntu 24.04.3 LTS con un peso aproximado de 3 GB
+
+*Configuracion en VirtualBox
+Terminada la descarga de la imagen ISO de Ubuntu Server, de inicio VirtualBox para crear el entorno con el nombre Server
+Se mantienen caracteristicas definidas por defecto
+Se configura la cantidad de memoria RAM en 4 GB, almacenamiento de 25GB y 2 CPU's 
+Una vez apliacadas las configuraciones en VirtualBox se procede a configurar el servidor
+En la instalacion inicial, se creo un administrador y una contraseña ^aquí va la foto
+-Se configuro el teclado en ingles y el idioma en español [\images\Instalacion\selecciondeidioma] [images\Instalacion\arranqueinicial]
+-Se mantuvieron algunas configuraciones por defecto sin afectar al servidor como la instalacion de ssh
+Terminada la descarga de paquetes requeridos por parte de Ubuntu, se realiza el primer uso de la terminal accediendo con el usuario creado on anterioridad para conocer la ip del servidor 
+
+*Configuracion de red
+
+Se realizo la configuracion de red DHCP con IP estaticas y con ayuda de tutoriales, lectura del servicio dhcp y con el uso de la inteligencia artificial
+El principal error era el servicio DHCP, al ejecutar el comando sudo systemctl status marcaba un error de Failed
+Despues de revisar a profundidad todos los archivos modificados,los errores que se cometieron fueron:
+mala escritura de la palabra addresses por addresses
+mala escritura de la IP que era 192.168 y el error era 192.160 modificando tanto la palabra como la IP y con ello el servicio dhcp por fin quedo funcional [\images\Instalacion\serviciodhcp]
+
+*Creacion de un usuario
+Como siguiente paso, se creo un nuevo usuario con los comandos adduser para la administracion del sistema y con permisos de super usuario [\images\Instalacion\creaciondeusuario]
+
+**Instalacion de SSH
+Se realizo la instalacion del servicio ssh y se verifico la correcta funcionalidad del servicio [\images\Instalacion\serviciossh]
+
+Conclusiones
+La presente practica documentada muestra mi aprendizaje la instalacion de Ubuntu Server en una maquina virtual
+Aunque se tuvieron ciertos problemas, lo cierto es que debo mejorar mi escritura en el teclado y sobre todo el analisis mas profundo en archivos editables para evitar problemas en cuanto a conexion se trata y para este caso son aplicables
+aprendi como conigurar IP y que debo ser mas cuidadoso a la hora de usar los servicios e Ubuntu Server ofrece
+
+
+
+
