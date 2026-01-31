@@ -16,11 +16,17 @@ Directorios y flujo de permisos
 
 /company/
 ├── it/           # Solo IT
+
 ├── desarrollo/   # Solo Desarrollo
+
 ├── contabilidad/ # Solo Contabilidad
+
 ├── rrhh/         # Solo RRHH
+
 ├── public/       # Todos pueden leer
+
 └── proyectos/    # Colaboración entre IT y Desarrollo
+
 
 (El flujo de carpetas, usuarios e ideas fueron soliictadas a la Inteligencia Artificial Deepseek) sin copiar y pegar, escribiendo cada comando para entender su funcionamiento y comportamiento)
 
@@ -63,13 +69,13 @@ Y para comprobar que los grupos se crearon con exito se usa getent group | grep 
 
 Los usuarios son parte importante en los servidores, pueden hacer conexiones por via ssh y para ello, deben crearse sus perfiles, algo parecido a perfiles como Facebook o WhatsApp, solo que con limitaciones en sus acciones y permisos hacia archivos y directorios
 
-Se escribe el comando sudo useradd -m -s /bin/bash -c "Juan Perez - Jefe de Sistemas" jperez
+Se escribe el comando sudo useradd -m -s /bin/bash -c "Usuario- descripcion" usuario
 
-Para realizar un cambio en la conraseña se usa echo "jperez:Temporal123" | sudo chpasswd
+Para realizar un cambio en la conraseña se usa echo "usuario:contrasena" | sudo chpasswd
 
-Para que solicite la contraseña desde el primer login se usa chage -d 0 jperez
+Para que solicite la contraseña desde el primer login se usa chage -d 0 usuario
 
-Y para agregarlo a un grupo, sudo usermod -aG departamento_it jperez
+Y para agregarlo a un grupo, sudo usermod -aG departamento_it usuario
 
 Si ahora se quiere comprobar si se agrego al grupo correctamente basta con escribir groups jperez
 
