@@ -111,18 +111,18 @@ Identificados los problemas y escrito de nuevo la configuracion correctamente, v
 
 Ahora si, el servicio funciona correctamente y para corroborar se conecta una laptop al router
 
-Aunque automaticamente el router da las IP's se tuvieron complicaciones con algunas configuraciones
+Aunque automaticamente el router da las IP's se tuvieron complicaciones con algunas configuraciones y se solucionaron
 
-1- Es importante, que el servidor tenga la misma IP que el router tiene por defecto
+1- Es importante, que el servidor tenga la misma IP que el router tiene por defecto, aunque se puede cambiar de manera que la IP sea diferente en las mismas configuraciones del router
 
-2- Si como yo, el router para practicar ya no sera utilizado, se puede reiniciar el router de fabrica y desactivar la opcion de DHCP para que con ello solo use el servidor como DHCP
+2- Si como yo, el router para practicar ya no sera utilizado, se puede reiniciar el router de fabrica y desactivar la opcion de DHCP para que con ello solo use el servidor como DHCP, tambien se puede cambiar la IP 
 
-3- Para este caso, como se practica con una VM, se desactivo el firewall de windows (peligroso)
+3- Para este caso, como se practica con una VM, se desactivo el firewall de windows (peligroso para ataques fuera de la practica pero funcional para la comunicacion)
 
 Para saber si ahora si existe comunicacion con el servidor y los clientes, se realizan ping's de maquinas a cliente y de clientes a maquina
 
 ![ping a cliente](https://github.com/JOGU-HP/ubuntu-server-lab/blob/181ed39bf3027d365d4bf3d25799feb3143244cb/images/ping%20a%20cliente.png)
 
-![ping a server] 
+![ping a server](https://github.com/JOGU-HP/ubuntu-server-lab/blob/c7fdfa9ba766e7a84f76e0283289c87f0d1b1591/images/ping%20a%20server.png)
 
-Con esto concluye la practica para la configuracion del servicio DHCP
+Con esto concluye la practica para la configuracion del servicio DHCP ya que ambos equipos reciben informacion de manera simultanea
